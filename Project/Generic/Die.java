@@ -5,18 +5,19 @@
  Projet: TP #2
  Étudiant(e)s: Ariane Ouellette, Hicham Belkaid, Megane Darnaud, Karim Ibrahim
  Professeur : Vincent Lacasse
- Nom du fichier: Dice.java
+ Nom du fichier: Die.java
  Date créé: 2021-06-16
  Date dern. modif. 2021-07-
  *******************************************************/
 package Generic;
 
-public class Dice implements Comparable<Dice>{
+public class Die implements Comparable<Die>{
 
     //attributes
     public int facesCount;
+    public int faceRolled;
 
-    public Dice(int facesCount) {
+    public Die(int facesCount) {
         this.facesCount = facesCount;
     }
 
@@ -29,8 +30,17 @@ public class Dice implements Comparable<Dice>{
         this.facesCount = facesCount;
     }
 
+    public int getFaceRolled() {
+        return faceRolled;
+    }
+
+    public void setFaceRolled(int faceRolled) {
+        this.faceRolled = faceRolled;
+    }
+
+
     @Override
-    public int compareTo(Dice d) {
+    public int compareTo(Die d) {
         return 0;
     }
 }
