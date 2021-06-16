@@ -9,8 +9,28 @@
  Date créé: 2021-06-16
  Date dern. modif. 2021-07-
  *******************************************************/
+package Generic;
 
 public class Player implements Comparable<Player> {
+
+    //attributes
+    public int ID;
+    public int turn;
+    public int diceAmount;
+    public int playerScore;
+
+    public Player(int ID) {
+        this.ID = ID;
+    }
+
+    //getters and setters
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     @Override
     public int compareTo(Player o) {

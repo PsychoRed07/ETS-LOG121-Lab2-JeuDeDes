@@ -5,15 +5,11 @@
  Projet: TP #2
  Étudiant(e)s: Ariane Ouellette, Hicham Belkaid, Megane Darnaud, Karim Ibrahim
  Professeur : Vincent Lacasse
- Nom du fichier: Dice.java
+ Nom du fichier: Creator.java
  Date créé: 2021-06-16
  Date dern. modif. 2021-07-
  *******************************************************/
+package Generic;
 
-public class Dice implements Comparable<Dice>{
-
-    @Override
-    public int compareTo(Dice d) {
-        return 0;
-    }
+public class Creator {
 }
