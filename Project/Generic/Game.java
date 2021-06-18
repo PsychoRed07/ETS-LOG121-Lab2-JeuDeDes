@@ -11,6 +11,10 @@
  *******************************************************/
 package Generic;
 
-public class Game {
+public abstract class Game {
+    //TODO - Change this
+    Creator c = new Creator();
+    private DieCollection dieCollection = c.createDice(0,0);
+    private PlayerCollection playerCollection = c.createPlayers(0);
 
 }

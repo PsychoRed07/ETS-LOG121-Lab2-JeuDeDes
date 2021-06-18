@@ -74,8 +74,9 @@ public class Creator {
      **/
     public Game createGame()
     {
-        Game g = new Game();
-        return g;
+        //Game g = new Game();
+        //return g;
+        return null;
     }
 
 }
