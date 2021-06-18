@@ -8,6 +8,7 @@
  Nom du fichier: Creator.java
  Date créé: 2021-06-16
  Date dern. modif. 2021-07-
+ Description: "Fabrique" class
  *******************************************************/
 package Generic;
 
@@ -26,20 +27,31 @@ public class Creator {
     }
 
     /**
-     * Method that creates players for the game
+     * Method that creates a collection of players for the game
      * @param playerCount : indicates the amount of players in the game
      **/
-    public Player[] createPlayers(int playerCount)
+    public PlayerCollection createPlayers(int playerCount)
     {
-        Player[] playerArr = new Player[playerCount];
+        PlayerCollection playerCollection = new PlayerCollection();
+        //initialize the array with count of players
+        playerCollection.playerArr = new Player[playerCount];
+        for(int i = 0; i < playerCount; i++)
+        {
+            Player p = createPlayer(i); //TODO - check if createPlayer is necessary
+            playerCollection.addPlayer(p,i);
+        }
+        return playerCollection;
+
+        //TODO - removeComment
+        /*Player[] playerArr = new Player[playerCount];
         for(int i = 0; i < playerCount; i++)
         {
             //use count as player ID
-            Player p = createPlayer(i); //TODO - check if createPlayer is necessary
+            Player p = createPlayer(i);
             playerArr[i] = p;
         }
-
-        return playerArr;
+        PlayerCollection playerCollection = new PlayerCollection(playerArr);
+        return playerCollection;*/
     }
 
     /**
@@ -53,19 +65,31 @@ public class Creator {
     }
 
     /**
-     * Method that creates dice for the game
+     * Method that creates collection of dice for the game
      * @param faceCount : indicates the amount of players in the game
      **/
-    public Die[] createDice(int faceCount, int dieCount)
+    public DieCollection createDice(int faceCount, int dieCount)
     {
-        Die[] dieArr = new Die[dieCount];
+        DieCollection dieCollection = new DieCollection();
+        //initialize the array with count of dice
+        dieCollection.dieArr = new Die[dieCount];
         for(int i = 0; i < dieCount; i++)
         {
             Die d = createDie(faceCount); //TODO - check if createDie is necessary
+            dieCollection.addDie(d,i);
+        }
+        return dieCollection;
+
+        //TODO - remove comment
+        /*Die[] dieArr = new Die[dieCount];
+        for(int i = 0; i < dieCount; i++)
+        {
+            Die d = createDie(faceCount);
             dieArr[i] = d;
         }
-
-        return dieArr;
+        //create collection
+        DieCollection dieCollection = new DieCollection(dieArr);
+        return dieCollection;*/
     }
 
     //TODO - implement when game class is created

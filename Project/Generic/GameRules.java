@@ -17,13 +17,22 @@ public abstract class GameRules {
     /**
      * Abstract method to define player information
      */
-    abstract void setPlayerAttributes();
+    abstract void setPlayerAttributes(int playerCount);
     /**
      * Abstract method to define die information
      */
-    abstract void setDieAttributes();
+    abstract void setDieAttributes(int dieFacesCount);
     /**
      * Abstract method to define game information
      */
     abstract void setGameRules();
+    /**
+     * Abstract method to define how to score is calculated
+     */
+    abstract void setScoreCalculation();
+    /**
+     * Abstract method to define winner information
+     */
+    abstract void setWinnerInformation();
+
 }

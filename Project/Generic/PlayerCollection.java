@@ -13,4 +13,25 @@ package Generic;
 
 public class PlayerCollection {
 
+    //attributes
+    Player[] playerArr;
+
+    public PlayerCollection() {
+    }
+
+    public PlayerCollection(Player[] playerCollection) {
+        this.playerArr = playerCollection;
+    }
+
+    public void addPlayer(Player p, int position)
+    {
+            if(playerArr.length > 0)
+                playerArr[position] = p;
+    }
+
+    //TODO - implement when iterator is done
+    /*public PlayerIterator createIterator()
+    {
+
+    }*/
 }

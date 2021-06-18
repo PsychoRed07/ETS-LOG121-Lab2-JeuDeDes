@@ -12,4 +12,26 @@
 package Generic;
 
 public class DieCollection {
+
+    //attributes
+    Die[] dieArr;
+
+    public DieCollection() {
+    }
+
+    public DieCollection(Die[] dieCollection) {
+        this.dieArr = dieCollection;
+    }
+
+    public void addDie(Die d, int position)
+    {
+        if(dieArr.length > 0)
+            dieArr[position] = d;
+    }
+
+    //TODO - implement when iterator is done
+    /*public DieIterator createIterator()
+    {
+
+    }*/
 }
