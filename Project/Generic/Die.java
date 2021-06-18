@@ -35,7 +35,7 @@ public class Die implements Comparable<Die>{
     public void setFaceRolled(int faceRolled) { this.faceRolled = faceRolled; }
 
     /**
-     * Method that sets the face rolled
+     * Method that sets the face rolled with a random int between 1 and the number of faces
      */
     public void rollDie()
     {
@@ -58,6 +58,10 @@ public class Die implements Comparable<Die>{
         return d.faceRolled - this.faceRolled ;
     }
 
+    /**
+     * This method pieces the die current roll
+     * @return string of player ID and score
+     */
     @Override
     public String toString() {
         return "Die{" +

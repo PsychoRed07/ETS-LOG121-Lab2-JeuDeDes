@@ -11,8 +11,6 @@
  *******************************************************/
 package Generic;
 
-import java.util.Comparator;
-
 public class Player implements Comparable<Player>{
 
     //attributes
@@ -71,6 +69,10 @@ public class Player implements Comparable<Player>{
         return p.playerScore - this.playerScore ;
     }
 
+    /**
+     * This method pieces the player ID and score as a string
+     * @return string of player ID and score
+     */
     @Override
     public String toString() {
         return "Player{" +

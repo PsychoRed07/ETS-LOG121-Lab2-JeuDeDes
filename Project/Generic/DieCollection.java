@@ -48,6 +48,10 @@ public class DieCollection {
             dieArr[position] = d;
     }
 
+    /**
+     * Method to get the die with the highest roll in the array
+     * @return the die with the highest roll
+     */
     public Die getHighestRollDie()
     {
         //TODO - remove print tests
@@ -55,6 +59,20 @@ public class DieCollection {
         Arrays.sort(dieArr);
         System.out.println("After sorting: " + Arrays.toString(dieArr));
         return dieArr[0];
+    }
+
+    /**
+     * Method to get the sum of all rolls in the collection
+     * @return the sum of the dice
+     */
+    public int getSumOfRolls()
+    {
+        int sum = 0;
+        for(Die d: dieArr)
+        {
+            sum += d.getFaceRolled();
+        }
+        return sum;
     }
 
     //TODO - implement when iterator is done

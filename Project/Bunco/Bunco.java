@@ -1,3 +1,14 @@
+/******************************************************
+ Cours:   LOG121
+ Session: E2021
+ Groupe:  01
+ Projet: TP #2
+ Étudiant(e)s: Ariane Ouellette, Hicham Belkaid, Megane Darnaud, Karim Ibrahim
+ Professeur : Vincent Lacasse
+ Nom du fichier: Bunco.java
+ Date créé: 2021-06-17
+ Date dern. modif. 2021-07-
+ *******************************************************/
 package Bunco;
 
 import Generic.Creator;
@@ -29,6 +40,9 @@ public class Bunco {
         dieCollection.getDieArr()[4].rollDie();
         //sort dice by roll
         System.out.println("Highest roll is "+dieCollection.getHighestRollDie().getFaceRolled());
+
+        //Test sum of all dice
+        System.out.println("The sum of all the rolls is: "+dieCollection.getSumOfRolls());
     }
 
 }

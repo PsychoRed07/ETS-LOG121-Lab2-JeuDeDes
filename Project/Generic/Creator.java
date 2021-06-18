@@ -12,8 +12,6 @@
  *******************************************************/
 package Generic;
 
-import java.util.ArrayList;
-
 public class Creator {
 
     /**
@@ -41,17 +39,6 @@ public class Creator {
             playerCollection.addPlayer(p,i);
         }
         return playerCollection;
-
-        //TODO - removeComment
-        /*Player[] playerArr = new Player[playerCount];
-        for(int i = 0; i < playerCount; i++)
-        {
-            //use count as player ID
-            Player p = createPlayer(i);
-            playerArr[i] = p;
-        }
-        PlayerCollection playerCollection = new PlayerCollection(playerArr);
-        return playerCollection;*/
     }
 
     /**
@@ -79,27 +66,16 @@ public class Creator {
             dieCollection.addDie(d,i);
         }
         return dieCollection;
-
-        //TODO - remove comment
-        /*Die[] dieArr = new Die[dieCount];
-        for(int i = 0; i < dieCount; i++)
-        {
-            Die d = createDie(faceCount);
-            dieArr[i] = d;
-        }
-        //create collection
-        DieCollection dieCollection = new DieCollection(dieArr);
-        return dieCollection;*/
     }
 
-    //TODO - implement when game class is created
+    //TODO - precise method when game class is implemented
     /**
      * Method that creates a game
      **/
-    /*public Game createGame()
+    public Game createGame()
     {
         Game g = new Game();
         return g;
-    }*/
+    }
 
 }
