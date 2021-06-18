@@ -30,17 +30,38 @@ public class Die implements Comparable<Die>{
         this.facesCount = facesCount;
     }
 
-    public int getFaceRolled() {
-        return faceRolled;
+    public int getFaceRolled() { return faceRolled; }
+
+    public void setFaceRolled(int faceRolled) { this.faceRolled = faceRolled; }
+
+    /**
+     * Method that sets the face rolled
+     */
+    public void rollDie()
+    {
+        int min = 1;
+        int max = this.getFacesCount();
+        int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+        this.setFaceRolled(random_int);
     }
 
-    public void setFaceRolled(int faceRolled) {
-        this.faceRolled = faceRolled;
-    }
-
-
+    /**
+     * This method overrides the compareTo method to sort the dice score from biggest to lowest roll
+     * @param d: die to compare
+     * @return
+     * score > 0 --> second die has a higher roll
+     * score == 0 --> score is equal
+     * score < 0 --> first die has a higher roll
+     */
     @Override
     public int compareTo(Die d) {
-        return 0;
+        return d.faceRolled - this.faceRolled ;
+    }
+
+    @Override
+    public String toString() {
+        return "Die{" +
+                "faceRolled=" + faceRolled +
+                '}';
     }
 }

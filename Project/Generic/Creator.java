@@ -20,7 +20,7 @@ public class Creator {
      * Method that creates a player
      * @param
      **/
-    public Player createPlayer(int playerID)
+    private Player createPlayer(int playerID)
     {
         Player p = new Player(playerID);
         return p;
@@ -58,7 +58,7 @@ public class Creator {
      * Method that creates a die
      * @param faceCount : indicates the amount of faces in a die
      **/
-    public Die createDie(int faceCount)
+    private Die createDie(int faceCount)
     {
         Die d = new Die(faceCount);
         return d;

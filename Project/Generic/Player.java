@@ -11,7 +11,9 @@
  *******************************************************/
 package Generic;
 
-public class Player implements Comparable<Player> {
+import java.util.Comparator;
+
+public class Player implements Comparable<Player>{
 
     //attributes
     public int ID;
@@ -32,11 +34,48 @@ public class Player implements Comparable<Player> {
         this.ID = ID;
     }
 
-
-    @Override
-    public int compareTo(Player o) {
-        return 0;
+    public int getTurn() {
+        return turn;
     }
 
+    public void setTurn(int turn) {
+        this.turn = turn;
+    }
 
+    public int getDiceAmount() {
+        return diceAmount;
+    }
+
+    public void setDiceAmount(int diceAmount) {
+        this.diceAmount = diceAmount;
+    }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public void setPlayerScore(int playerScore) {
+        this.playerScore = playerScore;
+    }
+
+    /**
+     * This method overrides the compareTo method to sort the score from biggest to lowest
+     * @param p player to compare
+     * @return
+     * score > 0 --> second player has a higher score
+     * score == 0 --> score is equal
+     * score < 0 --> first player has a higher score
+     */
+    @Override
+    public int compareTo(Player p) {
+        return p.playerScore - this.playerScore ;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "ID=" + ID +
+                ", playerScore=" + playerScore +
+                '}';
+    }
 }

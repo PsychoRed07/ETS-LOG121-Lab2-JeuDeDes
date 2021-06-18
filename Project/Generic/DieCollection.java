@@ -11,11 +11,25 @@
  *******************************************************/
 package Generic;
 
+import java.util.Arrays;
+
 public class DieCollection {
 
     //attributes
     Die[] dieArr;
 
+    //getters and setters
+    public Die[] getDieArr() {
+        return dieArr;
+    }
+
+    public void setDieArr(Die[] dieArr) {
+        this.dieArr = dieArr;
+    }
+
+    /**
+     * die collection is created in creator class
+     */
     public DieCollection() {
     }
 
@@ -23,10 +37,24 @@ public class DieCollection {
         this.dieArr = dieCollection;
     }
 
+    /**
+     * Method to add a die to the collection
+     * @param d: die to add
+     * @param position: position where to add die
+     */
     public void addDie(Die d, int position)
     {
         if(dieArr.length > 0)
             dieArr[position] = d;
+    }
+
+    public Die getHighestRollDie()
+    {
+        //TODO - remove print tests
+        System.out.println("Before sorting: " + Arrays.toString(dieArr));
+        Arrays.sort(dieArr);
+        System.out.println("After sorting: " + Arrays.toString(dieArr));
+        return dieArr[0];
     }
 
     //TODO - implement when iterator is done
