@@ -75,9 +75,11 @@ public class DieCollection {
         return sum;
     }
 
-    //TODO - implement when iterator is done
-    /*public DieIterator createIterator()
-    {
-
-    }*/
+    /**
+     * Method to initiate an iterator.
+     * @return returns an iterator.
+     */
+    public DieIterator createIterator() {
+        return new DieIterator(dieArr);
+    }
 }

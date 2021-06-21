@@ -58,9 +58,11 @@ public class PlayerCollection {
     }
 
 
-    //TODO - implement when iterator is done
-    /*public PlayerIterator createIterator()
-    {
-
-    }*/
+    /**
+     * Method to initiate an iterator.
+     * @return returns an iterator.
+     */
+    public PlayerIterator createIterator() {
+        return new PlayerIterator(playerArr);
+    }
 }
