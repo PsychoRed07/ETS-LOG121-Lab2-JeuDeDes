@@ -79,7 +79,7 @@ public class DieCollection {
      * Method to initiate an iterator.
      * @return returns an iterator.
      */
-    public DieIterator createIterator() {
+    public Iterator createIterator() {
         return new DieIterator(dieArr);
     }
 }

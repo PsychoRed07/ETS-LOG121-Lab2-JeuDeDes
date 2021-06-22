@@ -62,7 +62,7 @@ public class PlayerCollection {
      * Method to initiate an iterator.
      * @return returns an iterator.
      */
-    public PlayerIterator createIterator() {
+    public Iterator createIterator() {
         return new PlayerIterator(playerArr);
     }
 }
