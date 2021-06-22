@@ -18,6 +18,42 @@ public class DieCollection {
     //attributes
     Die[] dieArr;
 
+
+    public class DieIterator implements Iterator{
+        int pos = 0;
+
+        public DieIterator(){
+        }
+
+        /**
+         * Returns true if the iteration contains an object after the current one.
+         * @return
+         */
+        @Override
+        public boolean hasNext() {
+            return pos < dieArr.length && dieArr[pos] != null;
+        }
+
+        /**
+         * Returns the next element in the iteration.
+         * @return
+         */
+        @Override
+        public Die next() {
+            Die die = dieArr[pos];
+            pos += 1;
+            return die;
+        }
+
+        /**
+         * Reset the iterator to the first element of the iteration,
+         */
+        @Override
+        public void reset() {
+            pos = 0;
+        }
+    }
+
     //getters and setters
     public Die[] getDieArr() {
         return dieArr;
@@ -80,6 +116,6 @@ public class DieCollection {
      * @return returns an iterator.
      */
     public Iterator createIterator() {
-        return new DieIterator(dieArr);
+        return new DieIterator();
     }
 }
