@@ -29,7 +29,8 @@ public class PlayerCollection {
          */
         @Override
         public boolean hasNext() {
-            return pos < playerArr.length && playerArr[pos] != null;
+            boolean isEnd = pos < playerArr.length && playerArr[pos] != null;
+            return isEnd;
         }
 
         /**

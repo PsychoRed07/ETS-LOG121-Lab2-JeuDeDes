@@ -31,7 +31,8 @@ public class DieCollection {
          */
         @Override
         public boolean hasNext() {
-            return pos < dieArr.length && dieArr[pos] != null;
+            boolean isEnd = pos < dieArr.length && dieArr[pos] != null;
+            return isEnd;
         }
 
         /**
