@@ -1,14 +1,12 @@
 package Generic;
 
-public class PlayerIterator implements Iterator {
+public class CollectionDieIterator implements Iterator{
 
-    private Player[] playerArr;
+    private final Die[] dieArr;
     int pos = 0;
 
-    public PlayerIterator (){}
-
-    public PlayerIterator (Player[] playerArr){
-        this.playerArr = playerArr.clone();
+    public CollectionDieIterator(Die[] dieArr){
+        this.dieArr = dieArr.clone();
     }
 
     /**
@@ -17,7 +15,7 @@ public class PlayerIterator implements Iterator {
      */
     @Override
     public boolean hasNext() {
-        return pos < playerArr.length && playerArr[pos] != null;
+        return pos < dieArr.length && dieArr[pos] != null;
     }
 
     /**
@@ -25,10 +23,10 @@ public class PlayerIterator implements Iterator {
      * @return
      */
     @Override
-    public Player next() {
-        Player player = playerArr[pos];
+    public Die next() {
+        Die die = dieArr[pos];
         pos += 1;
-        return player;
+        return die;
     }
 
     /**
