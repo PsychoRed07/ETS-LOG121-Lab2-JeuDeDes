@@ -32,7 +32,7 @@ public class PlayerCollection extends Collection {
      */
     public PlayerCollection(int playerCount) {
         playerArr = new Player[playerCount];
-        super.genericCollection = playerArr;
+        //super.genericCollection = playerArr;
     }
 
     public PlayerCollection(Player[] playerCollection) {

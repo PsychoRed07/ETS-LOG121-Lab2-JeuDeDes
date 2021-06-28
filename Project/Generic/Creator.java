@@ -15,30 +15,20 @@ package Generic;
 public class Creator {
 
     /**
-     * Method that creates a player
-     * @param
-     **/
-    private Player createPlayer(int playerID)
-    {
-        Player p = new Player(playerID);
-        return p;
-    }
-
-    /**
      * Method that creates a collection of players for the game
      * @param playerCount : indicates the amount of players in the game
      **/
-    public PlayerCollection createPlayers(int playerCount)
+    public Collection createPlayers(int playerCount)
     {
-        PlayerCollection playerCollection = new PlayerCollection(playerCount);
+        Collection collection = new Collection();
         //initialize the array with count of players
         //playerCollection.playerArr = new Player[playerCount];
         for(int i = 0; i < playerCount; i++)
         {
-            Player p = createPlayer(i); //TODO - check if createPlayer is necessary
-            playerCollection.addPlayer(p,i);
+            Player p = new Player(i); //TODO - check if createPlayer is necessary
+            collection.addObject(p);
         }
-        return playerCollection;
+        return collection;
     }
 
     /**
