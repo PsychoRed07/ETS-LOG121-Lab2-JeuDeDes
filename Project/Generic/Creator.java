@@ -30,9 +30,9 @@ public class Creator {
      **/
     public PlayerCollection createPlayers(int playerCount)
     {
-        PlayerCollection playerCollection = new PlayerCollection();
+        PlayerCollection playerCollection = new PlayerCollection(playerCount);
         //initialize the array with count of players
-        playerCollection.playerArr = new Player[playerCount];
+        //playerCollection.playerArr = new Player[playerCount];
         for(int i = 0; i < playerCount; i++)
         {
             Player p = createPlayer(i); //TODO - check if createPlayer is necessary

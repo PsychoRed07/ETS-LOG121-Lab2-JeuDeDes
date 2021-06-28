@@ -13,7 +13,7 @@ package Generic;
 
 import java.util.Arrays;
 
-public class PlayerCollection {
+public class PlayerCollection extends Collection {
 
     //attributes
     Player[] playerArr;
@@ -30,7 +30,9 @@ public class PlayerCollection {
     /**
      * player collection is created in creator class
      */
-    public PlayerCollection() {
+    public PlayerCollection(int playerCount) {
+        playerArr = new Player[playerCount];
+        super.genericCollection = playerArr;
     }
 
     public PlayerCollection(Player[] playerCollection) {
@@ -58,11 +60,13 @@ public class PlayerCollection {
     }
 
 
+    //TODO - Remove method after generic iterator is implemented
     /**
      * Method to initiate an iterator.
      * @return returns an iterator.
      */
-    public Iterator createIterator() {
+    /*public Iterator createIterator() {
         return new PlayerIterator(playerArr);
-    }
+    }*/
+
 }

@@ -13,7 +13,7 @@ package Generic;
 
 import java.util.Arrays;
 
-public class DieCollection {
+public class DieCollection extends Collection{
 
     //attributes
     Die[] dieArr;
@@ -75,11 +75,12 @@ public class DieCollection {
         return sum;
     }
 
+    //TODO - Remove method after generic iterator is implemented
     /**
      * Method to initiate an iterator.
      * @return returns an iterator.
      */
-    public Iterator createIterator() {
+    /*public Iterator createIterator() {
         return new DieIterator(dieArr);
-    }
+    }*/
 }

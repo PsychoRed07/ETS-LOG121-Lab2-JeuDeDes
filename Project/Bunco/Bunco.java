@@ -43,20 +43,20 @@ public class Bunco {
         System.out.println("The sum of all the rolls is: "+dieCollection.getSumOfRolls());
 
         //iterates through the collection of players.
-        Iterator iteratorPlayer = playerCollection.createIterator();
+        /*Iterator iteratorPlayer = playerCollection.createIterator();
         while (iteratorPlayer.hasNext()){
             Player player = (Player) iteratorPlayer.next();
             System.out.println("Player " + player.getID());
         }
-        iteratorPlayer.reset();
+        iteratorPlayer.reset();*/
 
         //iterates through the collection of die.
-        Iterator iteratorDie = dieCollection.createIterator();
+        /*Iterator iteratorDie = dieCollection.createIterator();
         while (iteratorDie.hasNext()){
             Die die = (Die) iteratorDie.next();
             System.out.println("face rolled : " + die.getFaceRolled());
         }
-        iteratorDie.reset();
+        iteratorDie.reset();*/
     }
 
 }
