@@ -21,8 +21,6 @@ public class Creator {
     public Collection createPlayers(int playerCount)
     {
         Collection collection = new Collection();
-        //initialize the array with count of players
-        //playerCollection.playerArr = new Player[playerCount];
         for(int i = 0; i < playerCount; i++)
         {
             Player p = new Player(i);

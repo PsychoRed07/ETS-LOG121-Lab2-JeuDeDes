@@ -13,6 +13,9 @@ package Bunco;
 
 import Generic.*;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Bunco {
 
     public static void main(String[] args) {
@@ -22,16 +25,25 @@ public class Bunco {
         Creator creator = new Creator();
 
         //Collection + iterator vibes
-        Collection collection = new Collection();
-
-        collection.addObject(new Player(1));
-        collection.addObject(new Player(2));
-
+        Collection collection = creator.createPlayers(3);
         Iterator iterator = collection.createIterator();
+
         while (iterator.hasNext()){
           Player player = (Player) iterator.next();
             System.out.println(player.getID());
         }
+
+        //Collection + iterator vibes
+        Collection collection2 = creator.createDice(6,3);
+        Iterator iterator2 = collection2.createIterator();
+
+        while (iterator2.hasNext())
+        {
+            Die die = (Die) iterator2.next();
+            die.rollDie();
+            System.out.println(die.faceRolled);
+        }
+
 
     }
 
