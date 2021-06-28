@@ -42,21 +42,18 @@ public class Bunco {
         //Test sum of all dice
         System.out.println("The sum of all the rolls is: "+dieCollection.getSumOfRolls());
 
-        //iterates through the collection of players.
-        /*Iterator iteratorPlayer = playerCollection.createIterator();
-        while (iteratorPlayer.hasNext()){
-            Player player = (Player) iteratorPlayer.next();
-            System.out.println("Player " + player.getID());
-        }
-        iteratorPlayer.reset();*/
+        //Collection + iterator vibes
+        Collection collection = new Collection();
 
-        //iterates through the collection of die.
-        /*Iterator iteratorDie = dieCollection.createIterator();
-        while (iteratorDie.hasNext()){
-            Die die = (Die) iteratorDie.next();
-            System.out.println("face rolled : " + die.getFaceRolled());
+        collection.addObject(new Player(1));
+        collection.addObject(new Player(2));
+
+        Iterator iterator = collection.createIterator();
+        while (iterator.hasNext()){
+          Player player = (Player) iterator.next();
+            System.out.println(player.getID());
         }
-        iteratorDie.reset();*/
+
     }
 
 }
