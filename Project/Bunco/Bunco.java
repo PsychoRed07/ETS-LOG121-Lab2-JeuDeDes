@@ -21,20 +21,6 @@ public class Bunco {
         //TEST - CREATOR
         Creator creator = new Creator();
 
-
-        DieCollection dieCollection = creator.createDice(6,5);
-        //roll each dice
-        dieCollection.getDieArr()[0].rollDie();
-        dieCollection.getDieArr()[1].rollDie();
-        dieCollection.getDieArr()[2].rollDie();
-        dieCollection.getDieArr()[3].rollDie();
-        dieCollection.getDieArr()[4].rollDie();
-        //sort dice by roll
-        System.out.println("Highest roll is "+dieCollection.getHighestRollDie().getFaceRolled());
-
-        //Test sum of all dice
-        System.out.println("The sum of all the rolls is: "+dieCollection.getSumOfRolls());
-
         //Collection + iterator vibes
         Collection collection = new Collection();
 

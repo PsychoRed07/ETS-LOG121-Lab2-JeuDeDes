@@ -1,7 +1,6 @@
 package Generic;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Collection {
     //attributes

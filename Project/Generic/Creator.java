@@ -25,37 +25,25 @@ public class Creator {
         //playerCollection.playerArr = new Player[playerCount];
         for(int i = 0; i < playerCount; i++)
         {
-            Player p = new Player(i); //TODO - check if createPlayer is necessary
+            Player p = new Player(i);
             collection.addObject(p);
         }
         return collection;
     }
 
     /**
-     * Method that creates a die
-     * @param faceCount : indicates the amount of faces in a die
-     **/
-    private Die createDie(int faceCount)
-    {
-        Die d = new Die(faceCount);
-        return d;
-    }
-
-    /**
      * Method that creates collection of dice for the game
      * @param faceCount : indicates the amount of players in the game
      **/
-    public DieCollection createDice(int faceCount, int dieCount)
+    public Collection createDice(int faceCount, int dieCount)
     {
-        DieCollection dieCollection = new DieCollection();
-        //initialize the array with count of dice
-        dieCollection.dieArr = new Die[dieCount];
+        Collection collection = new Collection();
         for(int i = 0; i < dieCount; i++)
         {
-            Die d = createDie(faceCount); //TODO - check if createDie is necessary
-            dieCollection.addDie(d,i);
+            Die d = new Die(faceCount);
+            collection.addObject(d);
         }
-        return dieCollection;
+        return collection;
     }
 
     //TODO - precise method when game class is implemented
