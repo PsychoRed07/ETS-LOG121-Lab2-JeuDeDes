@@ -2,7 +2,7 @@ package Generic;
 
 import java.util.Arrays;
 
-public class Collection {
+public class Collection implements ICollection{
     //attributes
     private int max_objects = 1;
     private int pos = 0;
@@ -85,6 +85,7 @@ public class Collection {
      *
      * @return returns an iterator.
      */
+    @Override
     public Iterator createIterator() {
         return new Iterable();
     }
