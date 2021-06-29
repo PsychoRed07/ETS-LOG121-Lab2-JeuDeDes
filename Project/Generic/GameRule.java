@@ -1,7 +1,5 @@
 package Generic;
 
-import java.util.Collections;
-
 public abstract class GameRule {
     private int numberOfMaxTurns = 5;
     private int numberOfTurn = 1;
@@ -13,14 +11,6 @@ public abstract class GameRule {
     Iterator diceIterator;
 
     Creator creator = new Creator();
-
-    public Creator getCreator() {
-        return creator;
-    }
-
-    public void setCreator(Creator creator) {
-        this.creator = creator;
-    }
 
     public Iterator getPlayerIterator() {
         return players.createIterator();
@@ -70,19 +60,25 @@ public abstract class GameRule {
         this.dice = dice;
     }
 
+    /**
+     * Initialize the number of players that will be playing the game.
+     * @param numberOfPlayers
+     * @return
+     */
     public Collection initializePlayers(int numberOfPlayers){
         players = creator.createPlayers(numberOfPlayers);
         return players;
     }
 
+    /**
+     * Initialize the number of dice and the number of faces each dice will have in a game.
+     * @param faceCount
+     * @param numberOfDice
+     * @return
+     */
     public Collection initializeDice(int faceCount,int numberOfDice){
         dice = creator.createDice(faceCount, numberOfDice);
         return dice;
-    }
-
-    public int initializeRound(int numberOfRounds){
-        numberOfMaxTurns = numberOfRounds;
-        return numberOfMaxTurns;
     }
 
 }

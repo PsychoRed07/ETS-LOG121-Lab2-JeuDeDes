@@ -4,9 +4,9 @@ public class ScoreBunco implements IStrategy {
 
     @Override
     public void calculateScoreRound(Game game){
-        System.out.println("-- Round " + game.getNumberOfTurn() + " --");
+        System.out.println("\n-- Round " + game.getNumberOfTurn() + " --");
 
-        if(game.getNumberOfMaxTurns() <= game.getNumberOfTurn()){
+        if(game.getNumberOfMaxTurns() < game.getNumberOfTurn()){
             System.out.println("The game has ended !");
             return;
         }
@@ -16,7 +16,6 @@ public class ScoreBunco implements IStrategy {
             int firstNum = ((Die) game.getDice().getFirst()).getFaceRolled();
             int diceEqualToTurn =0 ;
             boolean isAllFaceEqual = true;
-            boolean isEqualToTurnNum = false;
 
             System.out.print("Player "+ player.getID() + " rolled");
             while (game.getDiceIterator().hasNext()){
@@ -55,17 +54,15 @@ public class ScoreBunco implements IStrategy {
 
     @Override
     public void calculateTheWinner(Game game){
+        game.players.sort();
+
+        System.out.println("-- Score Board --");
         while (game.getPlayerIterator().hasNext()){
             Player player = (Player) game.getPlayerIterator().next();
-            game.players.sort();
+            System.out.println("Player " + player.getID() + " has " + player.getPlayerScore() + " points !");
         }
 
-        while (game.getPlayerIterator().hasNext()){
-            Player player = (Player) game.getPlayerIterator().next();
-            System.out.println(player.getPlayerScore());
-        }
-
-        System.out.println("The winner is player " + ((Player) game.getPlayers().getFirst()).getID() + " with " + ((Player) game.getPlayers().getFirst()).getPlayerScore() + " points !");
+        System.out.println("\nThe winner is player " + ((Player) game.getPlayers().getFirst()).getID() + " with " + ((Player) game.getPlayers().getFirst()).getPlayerScore() + " points !");
     }
 
 }

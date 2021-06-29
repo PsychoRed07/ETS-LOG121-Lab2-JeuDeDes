@@ -18,6 +18,9 @@ import java.util.Collections;
 
 public class Bunco {
 
+    /*
+    CLASS USED ONLY FOR TESTING PURPOSES. DO NOT USE FOR ANYTHING ELSE. Thanks ! :)
+     */
     public static void main(String[] args) {
 
         //TODO - Remove tests
