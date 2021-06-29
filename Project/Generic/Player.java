@@ -14,10 +14,10 @@ package Generic;
 public class Player implements Comparable<Player>{
 
     //attributes
-    public int ID;
-    public int turn;
-    public int diceAmount;
-    public int playerScore;
+    private int ID;
+    private int turn;
+    private int diceAmount;
+    private int playerScore = 0;
 
     public Player(int ID) {
         this.ID = ID;

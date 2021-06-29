@@ -41,7 +41,7 @@ public class Bunco {
         {
             Die die = (Die) iterator2.next();
             die.rollDie();
-            System.out.println(die.faceRolled);
+            System.out.println(die.getFaceRolled());
         }
 
 

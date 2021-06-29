@@ -14,8 +14,8 @@ package Generic;
 public class Die implements Comparable<Die>{
 
     //attributes
-    public int facesCount;
-    public int faceRolled;
+    private int facesCount;
+    private int faceRolled;
 
     public Die(int facesCount) {
         this.facesCount = facesCount;
