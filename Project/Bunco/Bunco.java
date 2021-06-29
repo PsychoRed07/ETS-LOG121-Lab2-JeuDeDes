@@ -44,6 +44,9 @@ public class Bunco {
             System.out.println(die.getFaceRolled());
         }
 
+        Context context = new Context();
+        context.calculateScoreRound();
+        context.calculateTheWinner();
 
     }
 

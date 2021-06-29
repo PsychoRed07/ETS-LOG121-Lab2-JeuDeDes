@@ -1,6 +1,7 @@
 package Generic;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Collection implements ICollection{
     //attributes
@@ -21,7 +22,12 @@ public class Collection implements ICollection{
          */
         @Override
         public boolean hasNext() {
-            return pos < objects.length && objects[pos] != null;
+            if(pos < objects.length && objects[pos] != null){
+                return true;
+            }else{
+                reset();
+                return false;
+            }
         }
 
         /**
@@ -53,6 +59,21 @@ public class Collection implements ICollection{
 
     public void setObjects(Object[] objects) {
         this.objects = objects;
+    }
+
+    public Object getFirst(){
+        if(objects[0] != null)
+            return objects[0];
+        else
+            return null;
+    }
+
+    public int size(){
+        return objects.length;
+    }
+
+    public void sort(){
+        Arrays.sort(objects);
     }
 
     public void addObject(Object object) {
