@@ -56,7 +56,7 @@ public class ScoreBunco implements IStrategy {
     public void calculateTheWinner(Game game){
         game.players.sort();
 
-        System.out.println("-- Score Board --");
+        System.out.println("\n-- Score Board --");
         while (game.getPlayerIterator().hasNext()){
             Player player = (Player) game.getPlayerIterator().next();
             System.out.println("Player " + player.getID() + " has " + player.getPlayerScore() + " points !");
