@@ -44,15 +44,12 @@ public class Creator {
         return collection;
     }
 
-    //TODO - precise method when game class is implemented
     /**
      * Method that creates a game
      **/
     public Game createGame()
     {
-        //Game g = new Game();
-        //return g;
-        return null;
+        return new Game();
     }
 
 }
