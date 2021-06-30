@@ -26,8 +26,12 @@ public class Die implements Comparable<Die>{
         return facesCount;
     }
 
-    public void setFacesCount(int facesCount) {
-        this.facesCount = facesCount;
+    public void setFacesCount(int facesCount)
+    {
+        if(facesCount>0)
+            this.facesCount = facesCount;
+        else
+            this.facesCount = 6;
     }
 
     public int getFaceRolled() { return faceRolled; }

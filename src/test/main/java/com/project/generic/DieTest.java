@@ -3,6 +3,8 @@ package main.java.com.project.generic;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 
 class DieTest {
     private Die d1;
@@ -16,28 +18,62 @@ class DieTest {
 
     @Test
     void getFacesCount() {
-        //d1.setFaceCount(4);
+        assertEquals(6, d1.getFacesCount());
     }
 
     @Test
     void setFacesCount() {
+        d1.setFacesCount(4);
+        assertEquals(4, d1.getFacesCount());
+    }
+
+    @Test
+    void setFacesCountBelowMin() {
+        d1.setFacesCount(0);
+        //assert default value is 6
+        assertEquals(6, d1.getFacesCount());
     }
 
     @Test
     void getFaceRolled() {
+        d1.setFaceRolled(1);
+        assertEquals(1, d1.getFaceRolled());
     }
 
     @Test
     void setFaceRolled() {
+        d1.setFaceRolled(1);
+        assertEquals(1, d1.getFaceRolled());
     }
 
     @Test
     void rollDie() {
+        d1.rollDie();
+        assertNotNull(d1.getFaceRolled());
     }
 
     @Test
-    void compareTo() {
-
-        //assertTrue(de1.compareTo(de1)==0);
+    void compareToSmallerDie() {
+        d1.setFaceRolled(4);
+        d2.setFaceRolled(5);
+        assertTrue(d2.compareTo(d1)<0);
     }
+
+    @Test
+    void compareToBiggerDie() {
+        d1.setFaceRolled(4);
+        assertTrue(d2.compareTo(d1)>0);
+    }
+
+    @Test
+    void compareToSameDie() {
+        assertTrue(d2.compareTo(d1)==0);
+    }
+
+    @Test
+    public void compareToNullDie(){
+        d1.setFaceRolled(4);
+        assertThrows(IllegalArgumentException.class, () -> d1.compareTo(null));
+    }
+
 }
