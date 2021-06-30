@@ -1,6 +1,5 @@
 package main.java.com.project.generic;
 
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -73,7 +72,7 @@ class DieTest {
     @Test
     public void compareToNullDie(){
         d1.setFaceRolled(4);
-        assertThrows(IllegalArgumentException.class, () -> d1.compareTo(null));
+        assertThrows(NullPointerException.class, () -> d1.compareTo(null));
     }
 
 }
