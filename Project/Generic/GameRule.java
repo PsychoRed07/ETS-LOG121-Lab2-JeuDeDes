@@ -21,7 +21,7 @@ public abstract class GameRule {
     Iterator playerIterator ;
     Iterator diceIterator;
 
-    Creator creator = new Creator();
+    final Creator creator = new Creator();
 
     public Iterator getPlayerIterator() {
         return players.createIterator();
@@ -73,8 +73,8 @@ public abstract class GameRule {
 
     /**
      * Initialize the number of players that will be playing the game.
-     * @param numberOfPlayers
-     * @return
+     * @param numberOfPlayers the number of players that will be playing
+     * @return returns a collection of players.
      */
     public Collection initializePlayers(int numberOfPlayers){
         players = creator.createPlayers(numberOfPlayers);
@@ -83,9 +83,9 @@ public abstract class GameRule {
 
     /**
      * Initialize the number of dice and the number of faces each dice will have in a game.
-     * @param faceCount
-     * @param numberOfDice
-     * @return
+     * @param faceCount the number of faces on a die.
+     * @param numberOfDice the number of die needed.
+     * @return returns a collection of Die.
      */
     public Collection initializeDice(int faceCount,int numberOfDice){
         dice = creator.createDice(faceCount, numberOfDice);

@@ -15,13 +15,13 @@ public interface IStrategy {
 
     /**
      * Calculate the score of a player for only 1 turn.
-     * @param game
+     * @param game Uses the params in game to calculate the score
      */
     void calculateScoreRound(Game game);
 
     /**
-     * Calculate the winner of the game.S
-     * @param game
+     * Calculate the winner of the game.
+     * @param game Uses the params in game to calculate the winner
      */
     void calculateTheWinner(Game game);
 

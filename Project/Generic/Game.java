@@ -11,11 +11,6 @@
  *******************************************************/
 package Generic;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Game extends GameRule{
 
     public Game(){

@@ -2,6 +2,10 @@ package Generic;
 
 public class ScoreBunco implements IStrategy {
 
+    /**
+     * Calculate the score of a player for only 1 turn.
+     * @param game Uses the params in game to calculate the score
+     */
     @Override
     public void calculateScoreRound(Game game){
         System.out.println("\n-- Round " + game.getNumberOfTurn() + " --");
@@ -53,6 +57,10 @@ public class ScoreBunco implements IStrategy {
         game.setNumberOfTurn(game.getNumberOfTurn() + 1 );
     }
 
+    /**
+     * Calculate the winner of the game.
+     * @param game Uses the params in game to calculate the winner
+     */
     @Override
     public void calculateTheWinner(Game game){
         game.players.sort();

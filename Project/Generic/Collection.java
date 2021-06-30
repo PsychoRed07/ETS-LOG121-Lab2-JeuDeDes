@@ -13,7 +13,6 @@
 package Generic;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Collection implements ICollection{
     //attributes
@@ -29,8 +28,7 @@ public class Collection implements ICollection{
 
         /**
          * Returns true if the iteration contains an object after the current one.
-         *
-         * @return
+         * @return returns true if it has a next object. returns false if it doesn't have a next object.
          */
         @Override
         public boolean hasNext() {
@@ -44,8 +42,7 @@ public class Collection implements ICollection{
 
         /**
          * Returns the next element in the iteration.
-         *
-         * @return
+         * @return return the next object in the collection.
          */
         @Override
         public Object next() {

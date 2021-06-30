@@ -15,13 +15,13 @@ public interface Iterator {
 
    /**
     * Returns true if the iteration contains an object after the current one.
-    * @return
+    * @return returns true if it has a next object. returns false if it doesn't have a next object.
     */
    boolean hasNext();
 
    /**
     * Returns the next element in the iteration.
-    * @return
+    * @return return the next object in the collection.
     */
    Object next();
 

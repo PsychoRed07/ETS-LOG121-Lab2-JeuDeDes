@@ -14,7 +14,8 @@ package Generic;
 public class Context {
 
     private IStrategy strategy;
-    Game game = new Game();
+    final Game game;
+
     public Context(Game game){
         this.game = game;
     }
