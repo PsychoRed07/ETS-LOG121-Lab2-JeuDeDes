@@ -18,12 +18,38 @@ import java.util.Scanner;
 
 public class GameConsole {
 
+    static int playerCount = 0;
+    static int gameNumber = 0;
+    static Scanner scanner = new Scanner(new InputStreamReader(System.in));
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(new InputStreamReader(System.in));
+        runGame();
+    }
 
-        int playerCount = 0;
-        int gameNumber = 0;
+    public static void runGame(){
 
+
+        String quit = "";
+
+        while (!quit.equals("n")){
+            init();
+
+            //more cases can be created for all the games.
+            switch (gameNumber) {
+                case 1:
+                    new BuncoTemplate(playerCount);
+                    break;
+                default:
+                    System.out.println("Invalid Option. Please try again.");
+            }
+
+            System.out.println("\nWould you like to continue playing ? (y/n)");
+            quit = scanner.next();
+        }
+        System.out.println("Thank you !");
+    }
+
+    public static void init(){
         do {
             System.out.println("How many players will be playing ?");
             while (!scanner.hasNextInt()) {
@@ -31,7 +57,7 @@ public class GameConsole {
                 scanner.next();
             }
             playerCount = scanner.nextInt();
-        } while (playerCount <= 0 );
+        } while (playerCount <= 0);
 
 
         do {
@@ -41,18 +67,7 @@ public class GameConsole {
                 scanner.next();
             }
             gameNumber = scanner.nextInt();
-        } while (gameNumber <= 0 );
-
-        //more cases can be created for all the games.
-        switch (gameNumber) {
-            case 1 :
-                //playBunco();
-            default:
-                System.out.println("Invalid Option. Please try again.");
-        }
+        } while (gameNumber <= 0);
     }
-    
-   /* private void playBunco() {
-    	new BuncoTemplate(playerCount);
-    }*/
+
 }
