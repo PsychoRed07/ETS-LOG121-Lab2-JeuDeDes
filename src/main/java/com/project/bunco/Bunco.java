@@ -9,9 +9,9 @@
  Date créé: 2021-06-17
  Date dern. modif. 2021-07-
  *******************************************************/
-package Bunco;
+package main.java.com.project.bunco;
 
-import Generic.*;
+import main.java.com.project.generic.*;
 
 public class Bunco {
 

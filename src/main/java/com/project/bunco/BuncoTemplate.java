@@ -1,8 +1,8 @@
-package Bunco;
+package main.java.com.project.bunco;
 
-import Generic.Context;
-import Generic.Creator;
-import Generic.Game;
+import main.java.com.project.generic.Context;
+import main.java.com.project.generic.Creator;
+import main.java.com.project.generic.Game;
 
 public class BuncoTemplate {
 

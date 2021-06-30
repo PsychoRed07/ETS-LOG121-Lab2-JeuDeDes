@@ -10,7 +10,7 @@
  Date dern. modif. 2021-07-
  Description: "Fabrique" class
  *******************************************************/
-package Generic;
+package main.java.com.project.generic;
 
 public class Creator {
 

@@ -1,9 +1,9 @@
-package Bunco;
+package main.java.com.project.bunco;
 
-import Generic.Die;
-import Generic.Game;
-import Generic.IStrategy;
-import Generic.Player;
+import main.java.com.project.generic.Die;
+import main.java.com.project.generic.Game;
+import main.java.com.project.generic.IStrategy;
+import main.java.com.project.generic.Player;
 
 public class StrategyBunco implements IStrategy {
 

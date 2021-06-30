@@ -9,9 +9,9 @@
  Date créé: 2021-06-16
  Date dern. modif. 2021-07-
  *******************************************************/
-package Generic;
+package main.java.com.project.generic;
 
-import Bunco.BuncoTemplate;
+import main.java.com.project.bunco.BuncoTemplate;
 
 import java.io.InputStreamReader;
 import java.util.Scanner;

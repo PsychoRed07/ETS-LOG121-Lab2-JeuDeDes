@@ -1,4 +1,4 @@
-package Generic;
+package main.java.com.project.generic;
 
 import org.junit.jupiter.api.Test;
 
