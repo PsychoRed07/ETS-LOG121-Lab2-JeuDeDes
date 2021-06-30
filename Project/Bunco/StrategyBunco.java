@@ -1,6 +1,11 @@
-package Generic;
+package Bunco;
 
-public class ScoreBunco implements IStrategy {
+import Generic.Die;
+import Generic.Game;
+import Generic.IStrategy;
+import Generic.Player;
+
+public class StrategyBunco implements IStrategy {
 
     /**
      * Calculate the score of a player for only 1 turn.
@@ -63,7 +68,7 @@ public class ScoreBunco implements IStrategy {
      */
     @Override
     public void calculateTheWinner(Game game){
-        game.players.sort();
+        game.getPlayers().sort();
 
         System.out.println("\n-- Score Board --");
         while (game.getPlayerIterator().hasNext()){

@@ -15,11 +15,11 @@ public abstract class GameRule {
     private int numberOfMaxTurns = 5;
     private int numberOfTurn = 1;
 
-    Collection players = new Collection();
-    Collection dice = new Collection();
+    private Collection players = new Collection();
+    private Collection dice = new Collection();
 
-    Iterator playerIterator ;
-    Iterator diceIterator;
+    private Iterator playerIterator ;
+    private Iterator diceIterator;
 
     final Creator creator = new Creator();
 

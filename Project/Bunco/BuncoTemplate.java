@@ -2,7 +2,6 @@ package Bunco;
 
 import Generic.Context;
 import Generic.Game;
-import Generic.ScoreBunco;
 
 public class BuncoTemplate {
 
@@ -19,7 +18,7 @@ public class BuncoTemplate {
         game.setNumberOfMaxTurns(numberOfMaxRounds);
 
         Context context = new Context(game);
-        context.setStrategy(new ScoreBunco());
+        context.setStrategy(new StrategyBunco());
 
         for (int i = 0; i < game.getNumberOfMaxTurns(); i++) {
             context.executeCalculateScoreRound();
