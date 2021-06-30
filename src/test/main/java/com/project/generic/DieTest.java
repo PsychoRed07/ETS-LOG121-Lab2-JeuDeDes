@@ -1,16 +1,16 @@
 package main.java.com.project.generic;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 class DieTest {
     private Die d1;
     private Die d2;
 
-    @Before
+    @BeforeEach
     public void doBefore(){
         d1 = new Die(6);
         d2 = new Die(6);
