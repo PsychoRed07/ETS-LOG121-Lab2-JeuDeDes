@@ -12,5 +12,9 @@
 package Generic;
 
 public interface ICollection {
+    /**
+     * Creates the Iterator for a collection.
+     * @return
+     */
     Iterator createIterator();
 }

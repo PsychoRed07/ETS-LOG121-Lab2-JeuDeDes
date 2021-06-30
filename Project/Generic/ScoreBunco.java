@@ -18,6 +18,7 @@ public class ScoreBunco implements IStrategy {
             boolean isAllFaceEqual = true;
 
             System.out.print("Player "+ player.getID() + " rolled");
+
             while (game.getDiceIterator().hasNext()){
                 Die die = (Die) game.getDiceIterator().next();
                 die.rollDie();

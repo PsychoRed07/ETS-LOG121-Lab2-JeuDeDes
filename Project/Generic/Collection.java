@@ -115,7 +115,6 @@ public class Collection implements ICollection{
 
     /**
      * Method to initiate an iterator.
-     *
      * @return returns an iterator.
      */
     @Override
