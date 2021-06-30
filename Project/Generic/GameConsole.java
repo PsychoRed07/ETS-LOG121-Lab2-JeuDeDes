@@ -21,19 +21,34 @@ public class GameConsole {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(new InputStreamReader(System.in));
 
-        int playerCount;
-        int gameNumber;
+        int playerCount = 0;
+        int gameNumber = 0;
 
-        System.out.println("How many players will be playing ?");
-        playerCount = scanner.nextInt();
+        do {
+            System.out.println("How many players will be playing ?");
+            while (!scanner.hasNextInt()) {
+                System.out.println("That's not a number !");
+                scanner.next();
+            }
+            playerCount = scanner.nextInt();
+        } while (playerCount <= 0 );
 
-        System.out.println("What game will you be playing ? \n 1 - Bunco");
-        gameNumber = scanner.nextInt();
 
-        if (gameNumber == 1){
-            new BuncoTemplate(playerCount);
-        }else{
-            System.out.println("Invalid Option.");
+        do {
+            System.out.println("What game will you be playing ? \n 1 - Bunco");
+            while (!scanner.hasNextInt()) {
+                System.out.println("That's not a number !");
+                scanner.next();
+            }
+            gameNumber = scanner.nextInt();
+        } while (gameNumber <= 0 );
+
+        //more cases can be created for all the games.
+        switch (gameNumber) {
+            case 1 :
+                new BuncoTemplate(playerCount);
+            default:
+                System.out.println("Invalid Option. Please try again.");
         }
     }
 }
