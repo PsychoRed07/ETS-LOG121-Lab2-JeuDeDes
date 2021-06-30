@@ -46,9 +46,13 @@ public class GameConsole {
         //more cases can be created for all the games.
         switch (gameNumber) {
             case 1 :
-                new BuncoTemplate(playerCount);
+                playBunco();
             default:
                 System.out.println("Invalid Option. Please try again.");
         }
+    }
+    
+    private void playBunco() {
+    	new BuncoTemplate(playerCount);
     }
 }
