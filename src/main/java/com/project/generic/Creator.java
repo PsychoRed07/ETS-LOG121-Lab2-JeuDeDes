@@ -23,7 +23,7 @@ public class Creator {
         Collection collection = new Collection();
         for(int i = 0; i < playerCount; i++)
         {
-            Player p = new Player(i);
+            Player p = new Player(i+1);
             collection.addObject(p);
         }
         return collection;
