@@ -95,7 +95,7 @@ public class StrategyBunco implements IStrategy {
      */
     @Override
     public void calculateTheWinner(Game game){
-        game.getPlayers().sort();
+        game.getPlayers().sortDescending();
         boolean isDraw = false;
         boolean isFirstIteration = true;
 

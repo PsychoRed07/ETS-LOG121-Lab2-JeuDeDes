@@ -18,7 +18,7 @@ public class Collection implements ICollection{
     //attributes
     private int max_objects = 0;
     private int pos = 0;
-    Object[] objects = new Object[max_objects];
+    private Object[] objects = new Object[max_objects];
 
     public class Iterable implements Iterator {
 
@@ -81,7 +81,7 @@ public class Collection implements ICollection{
         return objects.length;
     }
 
-    public void sort(){
+    public void sortDescending(){
         Arrays.sort(objects);
     }
 

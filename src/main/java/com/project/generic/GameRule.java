@@ -27,16 +27,8 @@ public abstract class GameRule {
         return players.createIterator();
     }
 
-    public void setPlayerIterator(Iterator playerIterator) {
-        this.playerIterator = playerIterator;
-    }
-
     public Iterator getDiceIterator() {
         return dice.createIterator();
-    }
-
-    public void setDiceIterator(Iterator diceIterator) {
-        this.diceIterator = diceIterator;
     }
 
     public int getNumberOfTurn() {
