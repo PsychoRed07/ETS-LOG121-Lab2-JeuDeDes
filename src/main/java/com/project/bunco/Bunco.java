@@ -13,6 +13,8 @@ package main.java.com.project.bunco;
 
 import main.java.com.project.generic.*;
 
+import java.util.Arrays;
+
 public class Bunco {
 
     /*
@@ -42,6 +44,28 @@ public class Bunco {
             Die die = (Die) iterator2.next();
             die.rollDie();
             System.out.println(die.getFaceRolled());
+        }
+
+        //Tests - sort with comparable
+        int i = 10;
+        while (iterator.hasNext()){
+            Player player = (Player) iterator.next();
+            player.setPlayerScore(i);
+            i++;
+        }
+        //print not sorted
+        System.out.println("scores not sorted");
+        while (iterator.hasNext()){
+            Player player = (Player) iterator.next();
+            System.out.println(player.getPlayerScore());
+        }
+        //sort
+        collection.sortDescending();
+        //print sorted
+        System.out.println("scores sorted with comparable");
+        while (iterator.hasNext()){
+            Player player = (Player) iterator.next();
+            System.out.println(player.getPlayerScore());
         }
 
     }

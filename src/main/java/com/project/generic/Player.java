@@ -45,7 +45,10 @@ public class Player implements Comparable<Player>{
     }
 
     public void setDiceAmount(int diceAmount) {
-        this.diceAmount = diceAmount;
+        if(diceAmount >= 0)
+            this.diceAmount = diceAmount;
+        else
+            this.diceAmount = 0;
     }
 
     public int getPlayerScore() {
