@@ -3,6 +3,8 @@ package main.java.com.project.generic;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class IteratorTest {
@@ -39,7 +41,21 @@ class IteratorTest {
     }
 
     @Test
-    void reset() {
+    void reset() throws NoSuchFieldException, IllegalAccessException {
+        final Field field = iterator.getClass().getDeclaredField("pos");
+        field.setAccessible(true);
+
+        assertEquals((int) field.get(iterator), 0 );
+
+        int count = 0;
+        while (iterator.hasNext()){
+            count++;
+            Player o = (Player) iterator.next();
+            assertEquals((int) field.get(iterator), count);
+        }
+
+        iterator.reset();
+        assertEquals((int) field.get(iterator), 0);
 
     }
 }

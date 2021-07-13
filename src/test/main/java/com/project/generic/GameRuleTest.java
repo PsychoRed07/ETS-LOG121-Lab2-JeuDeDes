@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GameRuleTest {
 
     GameRule game;
+    Creator creator = new Creator();
 
     @BeforeEach
     void init(){
@@ -105,9 +106,11 @@ class GameRuleTest {
     void setPlayers() {
         //Arrange
 
+        Collection collection = creator.createPlayers(3);
         //Act
-
+        game.setPlayers(collection);
         //Assert
+        assertEquals(game.getPlayers().size(), 3);
     }
 
     @Test
@@ -123,10 +126,11 @@ class GameRuleTest {
     @Test
     void setDice() {
         //Arrange
-
+        Collection collection = creator.createDice(6,3);
         //Act
-
+        game.setDice(collection);
         //Assert
+        assertEquals(game.getDice().size(), 3);
     }
 
     @Test
