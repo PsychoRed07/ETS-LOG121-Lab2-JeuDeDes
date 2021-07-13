@@ -26,6 +26,10 @@ public class Die implements Comparable<Die>{
         return facesCount;
     }
 
+    /**
+     * This method sets the amount of faces on a die to the input if it is > 0 or to 6 by default
+     * @param facesCount number of faces on one die
+     */
     public void setFacesCount(int facesCount)
     {
         if(facesCount>0)

@@ -44,6 +44,10 @@ public class Player implements Comparable<Player>{
         return diceAmount;
     }
 
+    /**
+     * This method sets the amount of dice per user to the input if it is > 0 or to 0 by default
+     * @param diceAmount number of dice per user
+     */
     public void setDiceAmount(int diceAmount) {
         if(diceAmount >= 0)
             this.diceAmount = diceAmount;

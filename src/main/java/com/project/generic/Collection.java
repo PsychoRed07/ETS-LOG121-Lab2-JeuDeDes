@@ -70,6 +70,10 @@ public class Collection implements ICollection{
         this.objects = objects;
     }
 
+    /**
+     * This method gets the first object in the collection
+     * @return first object of the collection
+     */
     public Object getFirst(){
         if(objects[0] != null)
             return objects[0];
@@ -77,14 +81,25 @@ public class Collection implements ICollection{
             return null;
     }
 
+    /**
+     * This method gets the size of the collection
+     * @return size of collection as an int
+     */
     public int size(){
         return objects.length;
     }
 
+    /**
+     * This method sorts the collection in a specific order because of the collection items implementing comparable
+     */
     public void sortDescending(){
         Arrays.sort(objects);
     }
 
+    /**
+     * This method adds an object to the collection
+     * @param object object to add to the collection
+     */
     public void addObject(Object object) {
         if(objects.length >= max_objects){
             max_objects += 1;
