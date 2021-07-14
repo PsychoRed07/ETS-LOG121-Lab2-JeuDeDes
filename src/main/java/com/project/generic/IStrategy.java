@@ -25,4 +25,8 @@ public interface IStrategy {
      */
     void calculateTheWinner(Game game);
 
+    int getCurrentRoundScore();
+
+    int getWinner();
+
 }

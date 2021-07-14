@@ -31,4 +31,12 @@ public class Context {
     public void executeCalculateTheWinner(){
         strategy.calculateTheWinner(game);
     }
+
+    public int getCurrentRoundScore(){
+        return strategy.getCurrentRoundScore();
+    }
+
+    public int getWinner(){
+        return strategy.getWinner();
+    }
 }
