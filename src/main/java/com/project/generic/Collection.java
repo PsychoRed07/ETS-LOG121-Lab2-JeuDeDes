@@ -5,9 +5,9 @@
  Projet: TP #2
  Étudiant(e)s: Ariane Ouellette, Hicham Belkaid, Megane Darnaud, Karim Ibrahim
  Professeur : Vincent Lacasse
- Nom du fichier: Creator.java
+ Nom du fichier: Collection.java
  Date créé: 2021-06-16
- Date dern. modif. 2021-07-
+ Date dern. modif. 2021-07- 13
  Description: "Fabrique" class
  *******************************************************/
 package main.java.com.project.generic;

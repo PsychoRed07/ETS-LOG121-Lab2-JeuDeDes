@@ -1,3 +1,14 @@
+/******************************************************
+ Cours:   LOG121
+ Session: E2021
+ Groupe:  01
+ Projet: TP #2
+ Étudiant(e)s: Ariane Ouellette, Hicham Belkaid, Megane Darnaud, Karim Ibrahim
+ Professeur : Vincent Lacasse
+ Nom du fichier: StrategyBunco.java
+ Date créé: 2021-06-20
+ Date dern. modif. 2021-07-13
+ *******************************************************/
 package main.java.com.project.bunco;
 
 import main.java.com.project.generic.Die;
