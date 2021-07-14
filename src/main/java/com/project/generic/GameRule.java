@@ -18,10 +18,7 @@ public abstract class GameRule {
     private Collection players = new Collection();
     private Collection dice = new Collection();
 
-    private Iterator playerIterator ;
-    private Iterator diceIterator;
-
-    final Creator creator = new Creator();
+    final private Creator creator = new Creator();
 
     public Iterator getPlayerIterator() {
         return players.createIterator();

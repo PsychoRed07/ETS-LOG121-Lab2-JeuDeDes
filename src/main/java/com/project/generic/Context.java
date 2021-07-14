@@ -24,10 +24,16 @@ public class Context {
         this.strategy = strategy;
     }
 
+    /**
+     * executes the method to calculate the score of a player for only 1 turn.
+     */
     public void executeCalculateScoreRound(){
         strategy.calculateScoreRound(game);
     }
 
+    /**
+     * executes the method to calculate the winner of the game.
+     */
     public void executeCalculateTheWinner(){
         strategy.calculateTheWinner(game);
     }

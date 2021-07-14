@@ -22,13 +22,18 @@ public class GameConsole {
     static int gameNumber = 0;
     static Scanner scanner = new Scanner(new InputStreamReader(System.in));
 
+    /**
+     * The main, runs the application.
+     * @param args
+     */
     public static void main(String[] args) {
         runGame();
     }
 
+    /**
+     * runs the game.
+     */
     public static void runGame(){
-
-
         String quit = "";
 
         while (!quit.equals("n")){
@@ -49,6 +54,9 @@ public class GameConsole {
         System.out.println("Thank you !");
     }
 
+    /**
+     * Initializes the main components for the game.
+     */
     public static void init(){
         do {
             System.out.println("How many players will be playing ?");

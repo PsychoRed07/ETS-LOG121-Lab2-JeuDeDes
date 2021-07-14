@@ -120,11 +120,6 @@ public class Collection implements ICollection{
     public Collection() {
     }
 
-    public Collection(Object[] Collection) {
-        this.objects = Collection;
-    }
-
-
     /**
      * Method to initiate an iterator.
      * @return returns an iterator.
