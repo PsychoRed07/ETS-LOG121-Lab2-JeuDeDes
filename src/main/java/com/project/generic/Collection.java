@@ -18,10 +18,9 @@ public class Collection implements ICollection{
     //attributes
     private int max_objects = 0;
     private Object[] objects = new Object[max_objects];
+    private int pos = 0;
 
     public class Iterable implements Iterator {
-
-        private int pos = 0;
 
         public Iterable() {
         }

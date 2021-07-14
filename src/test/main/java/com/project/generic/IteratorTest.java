@@ -11,11 +11,11 @@ class IteratorTest {
 
     Creator creator;
     Iterator iterator;
-
+    Collection collection;
     @BeforeEach
     void doBefore() {
         creator = new Creator();
-        Collection collection = creator.createPlayers(5);
+        collection = creator.createPlayers(5);
         iterator = collection.createIterator();
     }
 
@@ -42,20 +42,20 @@ class IteratorTest {
 
     @Test
     void reset() throws NoSuchFieldException, IllegalAccessException {
-        final Field field = iterator.getClass().getDeclaredField("pos");
+        final Field field = collection.getClass().getDeclaredField("pos");
         field.setAccessible(true);
 
-        assertEquals((int) field.get(iterator), 0 );
+        assertEquals((int) field.get(collection), 0 );
 
         int count = 0;
         while (iterator.hasNext()){
             count++;
             Player o = (Player) iterator.next();
-            assertEquals((int) field.get(iterator), count);
+            assertEquals((int) field.get(collection), count);
         }
 
         iterator.reset();
-        assertEquals((int) field.get(iterator), 0);
+        assertEquals((int) field.get(collection), 0);
 
     }
 }
