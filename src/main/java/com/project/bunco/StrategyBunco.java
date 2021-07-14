@@ -9,6 +9,24 @@ public class StrategyBunco implements IStrategy {
 
     final int BUNCO_POINTS = 21;
     final int EQUAL_FACES_POINTS = 5;
+    private int currentRoundScore;
+    private int winnerId;
+
+    public int getWinner() {
+        return winnerId;
+    }
+
+    public void setWinner(int winner) {
+        this.winnerId = winner;
+    }
+
+    public void setCurrentRoundScore(int currentRoundScore) {
+        this.currentRoundScore = currentRoundScore;
+    }
+
+    public int getCurrentRoundScore() {
+        return currentRoundScore;
+    }
 
     /**
      * Calculate the score of a player for only 1 turn.
@@ -59,6 +77,7 @@ public class StrategyBunco implements IStrategy {
                     System.out.println("|   BUNCO!!  |");
                     System.out.println("--------------");
                     System.out.println("Added " + BUNCO_POINTS +  "points to player " + player.getID() + "\n");
+                    setCurrentRoundScore(getCurrentRoundScore() + BUNCO_POINTS);
                     diceEqualToTurn = 0;
                     hasScored = true;
                     isNextPlayerTurn = true;
@@ -69,6 +88,7 @@ public class StrategyBunco implements IStrategy {
                     System.out.println("|   ALL EQUAL FACES  |");
                     System.out.println("----------------------");
                     System.out.println("Added " + EQUAL_FACES_POINTS +  " points to player " + player.getID() + "\n");
+                    setCurrentRoundScore(getCurrentRoundScore() + EQUAL_FACES_POINTS);
                     diceEqualToTurn = 0;
                     //die equal to turn
                 }else {
@@ -77,6 +97,7 @@ public class StrategyBunco implements IStrategy {
                         hasScored = true;
                     }
                     System.out.println("Added " + diceEqualToTurn + " points to player " + player.getID() + "\n");
+                    setCurrentRoundScore(getCurrentRoundScore() + diceEqualToTurn);
                     diceEqualToTurn = 0;
                 }
 
@@ -112,6 +133,7 @@ public class StrategyBunco implements IStrategy {
             System.out.println("\nThe game is a draw!");
         }else{
             System.out.println("\nThe winner is player " + ((Player) game.getPlayers().getFirst()).getID() + " with " + ((Player) game.getPlayers().getFirst()).getPlayerScore() + " points !");
+            setWinner(((Player) game.getPlayers().getFirst()).getID());
         }
     }
 
